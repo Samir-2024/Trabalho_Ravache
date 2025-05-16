@@ -4,6 +4,7 @@ public class No {
 
     public No(String valor) {
         this.valor = valor;
-        esquerda = direita = null;
+        this.esquerda = null;
+        this.direita = null;
     }
 }
