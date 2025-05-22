@@ -1,3 +1,4 @@
+
 public class ArvoreBinaria {
     public No raiz;
 
@@ -42,7 +43,7 @@ public class ArvoreBinaria {
         }
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ArvoreBinaria arvore = new ArvoreBinaria();
 
         System.out.print("Pré-ordem: ");
@@ -54,7 +55,7 @@ public class ArvoreBinaria {
         System.out.print("Pós-ordem: ");
         arvore.posOrdem(arvore.raiz);
     }
-
+    
     public int contarNos(No no) {
         if (no == null) {
             return 0;
@@ -65,5 +66,25 @@ public class ArvoreBinaria {
 
     public int contarNos() {
         return contarNos(raiz);
+    }
+    */
+
+    public void preOrdemRecursivo(No no) {
+        No noAtual = no;
+        while (no != null) {
+            if (noAtual != null) {
+                System.out.print(noAtual.valor + " ");
+                noAtual = noAtual.esquerda;
+            } else if (noAtual == null) {
+                noAtual = no.direita;
+            }
+    }
+}
+    public static void main(String[] args) {
+        ArvoreBinaria arvore = new ArvoreBinaria();
+
+        System.out.print("Pré-ordem: ");
+        arvore.preOrdemRecursivo(arvore.raiz);
+       
     }
 }
