@@ -26,9 +26,44 @@ public class ArvoreBinaria {
         }
     }
 
+    public void emOrdem(No no) {
+        if (no != null) {
+            emOrdem(no.esquerda);
+            System.out.print(no.valor + " ");
+            emOrdem(no.direita);
+        }
+    }
+
+    public void posOrdem(No no) {
+        if (no != null) {
+            posOrdem(no.esquerda);
+            System.out.print(no.valor + " ");
+            posOrdem(no.direita);
+        }
+    }
+
     public static void main(String[] args) {
         ArvoreBinaria arvore = new ArvoreBinaria();
+
         System.out.print("Pré-ordem: ");
         arvore.preOrdem(arvore.raiz);
+        System.out.println();
+        System.out.print("Em-Ordem: ");
+        arvore.emOrdem(arvore.raiz);
+        System.out.println();
+        System.out.print("Pós-ordem: ");
+        arvore.posOrdem(arvore.raiz);
+    }
+
+    public int contarNos(No no) {
+        if (no == null) {
+            return 0;
+        } else {
+            return 1 + contarNos(no.esquerda) + contarNos(no.direita);
+        }
+    }
+
+    public int contarNos() {
+        return contarNos(raiz);
     }
 }
