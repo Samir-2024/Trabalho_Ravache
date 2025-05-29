@@ -1,13 +1,13 @@
 public class No {
     public String valor;
     public No esquerda, direita;
-    public int altura;
+    public int fatorBalanceamento;
 
     public No(String valor) {
         this.valor = valor;
         this.esquerda = null;
         this.direita = null;
-        this.altura = 0;
+        this.fatorBalanceamento = 0;
     }
 
     public String getValor() {
@@ -33,11 +33,11 @@ public class No {
         this.direita = direita;
     }
 
-    public int getAltura() {
-        return altura;
+    public int getfatorBalanceamento() {
+        return fatorBalanceamento;
     }
 
-    public void setAltura(int altura) {
-        this.altura = altura;
+    public void setfatorBalanceamento(int fatorBalanceamento) {
+        this.fatorBalanceamento = fatorBalanceamento;
     }
 }
