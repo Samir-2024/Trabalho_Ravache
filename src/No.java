@@ -7,7 +7,7 @@ public class No {
         this.valor = valor;
         this.esquerda = null;
         this.direita = null;
-        this.altura = 1;
+        this.altura = 0;
     }
 
     public String getValor() {
@@ -20,19 +20,24 @@ public class No {
     public No getEsquerda() {
         return esquerda;
     }
+
     public void setEsquerda(No esquerda) {
         this.esquerda = esquerda;
     }
+
     public No getDireita() {
         return direita;
     }
+
     public void setDireita(No direita) {
         this.direita = direita;
     }
-    public No getAltura() {
+
+    public int getAltura() {
         return altura;
     }
-    public void setAltura(No altura) {
+
+    public void setAltura(int altura) {
         this.altura = altura;
     }
 }
