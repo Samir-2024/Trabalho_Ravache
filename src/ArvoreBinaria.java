@@ -42,6 +42,16 @@ public class ArvoreBinaria {
         }
     }
 
+    public void emNivel(No no, int nivel) {
+        if (no != null) {
+            if (no.nivel == nivel) {
+                System.out.println(no.valor + " ");
+            } else {
+                emNivel(no.esquerda, nivel);
+                emNivel(no.direita, nivel);
+            }
+        }
+    }
     
     public void ContarFolha(No no, int[] contador) {
         if (no != null) {
