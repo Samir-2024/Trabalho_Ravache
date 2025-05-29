@@ -1,4 +1,3 @@
-
 public class ArvoreBinaria {
     public No raiz;
 
@@ -76,3 +75,4 @@ public class ArvoreBinaria {
     
 
 }
+
