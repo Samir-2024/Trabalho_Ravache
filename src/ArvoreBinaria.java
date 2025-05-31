@@ -64,6 +64,12 @@ public class ArvoreBinaria {
         }
     }
 
+    public void contarIteracoes(No no, int[] contador) {
+        if (no != null) {
+            contador[0]++;
+            contarIteracoes(no.esquerda, contador);
+            contarIteracoes(no.direita, contador);}
+    }
     public static void main(String[] args) {
         ArvoreBinaria arvore = new ArvoreBinaria();
 
@@ -81,6 +87,11 @@ public class ArvoreBinaria {
         int[] contador = {0};
         arvore.ContarFolha(no, contador);
         System.out.println(contador[0]);
+        System.out.print("Contagem de iterações: ");
+        int[] contadorIteracoes = {0};
+        arvore.contarIteracoes(no, contadorIteracoes);
+        System.out.println(contadorIteracoes[0]);
+        
     }
     
 
