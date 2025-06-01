@@ -15,15 +15,19 @@ public class App {
         System.out.println();
 
         System.out.println("Em-nível");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i <= 3; i++) {
             System.out.print("Nível " + i + ": ");
-            arvore.emNivel(arvore.raiz, i);
+            arvore.emNivel(arvore.raiz, i);        
         }
+    
+        System.out.println("Em-ordem iterativo: ");
+        arvore.emOrdemRecursivo(arvore.raiz);
+        System.out.println();
 
         System.out.print("Contagem de folhas: ");
         No no = arvore.raiz;
         int[] contador = {0};
-        arvore.ContarFolha(no, contador);
+        arvore.contarFolha(no, contador);
         System.out.println(contador[0]);
 
         System.out.print("Contagem de iterações: ");
