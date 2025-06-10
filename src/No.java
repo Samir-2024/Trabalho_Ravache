@@ -10,6 +10,7 @@ public class No {
         this.direita = null;
         this.fatorBalanceamento = 0;
         this.nivel = 0;
+
     }
 
     public String getValor() {

@@ -1,4 +1,4 @@
-import java.util.Stack;
+import java.util.Stack; 
 
 public class ArvoreBinaria {
     public No raiz;
@@ -56,19 +56,19 @@ public class ArvoreBinaria {
     }
  
     public void emOrdemRecursivo(No raiz) {
-        Stack<No> pilha = new Stack<>();
+        Stack<No> pilha = new Stack<>(); 
         No atual = raiz;
-
-        while (atual != null || !pilha.isEmpty()) {
+        while (atual != null || !pilha.empty()) {
             while (atual != null) {
                 pilha.push(atual);
                 atual = atual.esquerda;
             }
             atual = pilha.pop();
-            System.out.print(atual.valor + " ");
+            System.out.println(atual.valor + " ");
             atual = atual.direita;
         }
     }
+
     public void contarFolha(No no, int[] contador) {
         if (no != null) {
             if (no.esquerda == null && no.direita == null) {
@@ -87,6 +87,25 @@ public class ArvoreBinaria {
             contarIteracoes(no.direita, contador);}
     }
 
+    public void inserir(No no, String valor) {
+    if (no != null) {
+        if (valor.compareTo(no.valor) < 0) {
+            if (no.esquerda == null) {
+                no.esquerda = new No(valor);
+            } else {
+                inserir(no.esquerda, valor);
+            }
+        } else {
+            if (no.direita == null) {
+                no.direita = new No(valor);
+            } else {
+                inserir(no.direita, valor);
+            }
+        }
+    }
+    }
+
+    
+
 
 }
-
