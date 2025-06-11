@@ -131,6 +131,6 @@ public class NoAVL {
             return rotacaoEsquerda(no);
         }
         return no;
-    }
+    } 
 }
 

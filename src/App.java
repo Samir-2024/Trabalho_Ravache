@@ -91,5 +91,14 @@ public class App {
         preOrdemAVL(noAVL);
         System.out.println();
         
+        System.out.println("Buscarndo 6: ");
+        NoAVL resultadoBusca = noAVL.buscar(noAVL, 6);
+        if (resultadoBusca != null) {
+            System.out.println("Valor encontrado: " + resultadoBusca.chave);
+        } else {
+            System.out.println("Valor não encontrado.");
+        }
+
+        
     }
 }
