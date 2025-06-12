@@ -6,14 +6,12 @@ public class Rubro {
 
     public Rubro(int valor) {
         chave = valor;
-        color = 1;
-        
+        color = 1;   
     }
 
     public Rubro(int valor , int color) {
         chave = valor;
         this.color = color;
-        
     }
 
     public Rubro(int valor , Rubro esquerdo, Rubro direito, Rubro pai) {
@@ -82,17 +80,15 @@ public class Rubro {
         this.pai = new Rubro(valor);
     } 
 
-
     public class ArvoreRubroNegra {
     private Rubro raiz;
 
     public void inserir(int chave) {
-        Rubro novo = new Rubro(chave); // cor vermelha por padrão
+        Rubro novo = new Rubro(chave); 
         raiz = inserirBST(raiz, novo);
         corrigirInsercao(novo);
     }
 
-    // Inserção padrão de árvore binária
     private Rubro inserirBST(Rubro atual, Rubro novo) {
         if (atual == null) {
             return novo;
@@ -107,7 +103,6 @@ public class Rubro {
         return atual;
     }
 
-    // Corrige violações após inserção
     private void corrigirInsercao(Rubro node) {
         while (node != raiz && node.getPai().isVermelho()) {
             Rubro pai = node.getPai();
@@ -194,18 +189,12 @@ public class Rubro {
         y.setDireito(x);
     }
 
-    // Método auxiliar para imprimir (opcional)
-    public void emOrdem(Rubro node) {
-        if (node != null) {
-            emOrdem(node.getEsquerdo());
-            System.out.print(node.chave + (node.isVermelho() ? "R " : "P "));
-            emOrdem(node.getDireito());
-        }
-    }
-
     public Rubro getRaiz() {
         return raiz;
     }
-}
-    
+
+    public ArvoreRubroNegra() {
+        raiz = null;
+    }
+    }   
 }
